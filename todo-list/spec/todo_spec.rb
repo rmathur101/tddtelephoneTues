@@ -1,12 +1,8 @@
 require 'spec_helper'
-
+require 'todo'
 
 describe Task do
   it "Has title description status and timestamps " do
-    task = Task.new
-      expect(task.description).to be_true
-      expect(task.status).to be_true
-      expect(task.title).to be_true
-      expect(task.timestamps).to be_true
+    expect(Task.new).to respond_to(:description, :status, :title, :timestamps)
   end
 end
